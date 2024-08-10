@@ -76,3 +76,7 @@ Ever wondered if your favorite websites are up and running? This tool helps you 
 ## Contributing
 
 Got ideas or fixes? Feel free to contribute! Open an issue or submit a pull request—your help is always appreciated.
+
+## Features I would like to add
+
+- Add an argument that sets the timeout of the request(s)

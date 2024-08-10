@@ -11,7 +11,7 @@ def normalize_url(url: str) -> str:
         url = f"http://{url}"
     return url
 
-def getSites(urls: list[str]):
+def get_sites(urls: list[str]):
     # Header and separator
     print(f"{'No.':<4} {'URL':<50} {'Status':<15} {'Reason':<25} {'Time Elapsed':<15}")
     print("="*110)
@@ -63,7 +63,7 @@ def main():
                 urls = []
                 with open(args.file, "r") as reader:
                     urls = [line.strip() for line in reader if line.strip()]
-                getSites(urls)
+                get_sites(urls)
             except FileNotFoundError as e:
                 print(f"File not found: {e}")
             except Exception as e:
@@ -71,7 +71,7 @@ def main():
         else:
             # Ensure urls is a list of strings
             if args.urls:
-                getSites(args.urls)
+                get_sites(args.urls)
             else:
                 print("No URLs provided.")
     except KeyboardInterrupt:
