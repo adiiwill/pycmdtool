@@ -67,11 +67,10 @@ Ever wondered if your favorite websites are up and running? This tool helps you 
    - **Redirection**: Blue
    - **Client Errors**: Yellow
    - **Server Errors**: Red
-3. **Error Alerts**: If something goes wrong, the tool will let you know with a helpful message.
 
 ## What If Something Goes Wrong?
 
-- **File Not Found**: If your file isn’t where it should be, you’ll get a friendly error message.
+- **File Not Found**: If your file isn’t where it should be, you’ll get an error message.
 - **Request Issues**: Any problems with fetching data will be clearly reported.
 
 ## Contributing
