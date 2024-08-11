@@ -2,14 +2,14 @@
 
 ## What Is This?
 
-Ever wondered if your favorite websites are up and running? This tool helps you check the availability of websites. It can even read from files that contain a collection of links.
+Ever wondered if your favorite websites are up and running? This tool helps you check the availability of websites. It can even read from files that contain a collection of links and save the results in a CSV file for easy analysis.
 
 ## Features
 
 - **Check Multiple Websites**: Test the availability of several sites at once.
 - **Visual Results**: See results in a colorful table where status codes are easy to spot.
 - **Flexible Input**: Use a list of URLs directly or load them from a file.
-- **Error Handling**: Get clear feedback if something goes wrong.
+- **CSV Output**: Save the results to a CSV file for easy sharing and further analysis.
 
 ## What You Need
 
@@ -26,6 +26,7 @@ Ever wondered if your favorite websites are up and running? This tool helps you 
 
 - **Direct URLs**: Provide URLs directly in the command line.
 - **From a File**: Use `-f` or `--file` to specify a file with URLs (one per line).
+- **Output to CSV**: Use `-w` or `--write` to specify a CSV file where results will be saved.
 
 ### Examples
 
@@ -50,7 +51,13 @@ Ever wondered if your favorite websites are up and running? This tool helps you 
     python upt.py -f urls.txt
     ```
 
-3. **Get Help:**
+3. **Save Results to a CSV File:**
+
+    ```bash
+    python upt.py -f urls.txt -w output.csv
+    ```
+
+4. **Get Help:**
 
     If you’re unsure what to do, you can always check the help message:
 
