@@ -33,7 +33,7 @@ Ever wondered if your favorite websites are up and running? This tool helps you 
 1. **Check Specific URLs:**
 
     ```bash
-    python upt.py https://www.google.com https://www.github.com
+    python wac.py https://www.google.com https://www.github.com
     ```
 
 2. **Check URLs from a File:**
@@ -48,7 +48,7 @@ Ever wondered if your favorite websites are up and running? This tool helps you 
     Then run:
 
     ```bash
-    python upt.py -f urls.txt
+    python wac.py -f urls.txt
     ```
 
 3. **Save Results to a CSV File:**
@@ -62,7 +62,7 @@ Ever wondered if your favorite websites are up and running? This tool helps you 
     If you’re unsure what to do, you can always check the help message:
 
     ```bash
-    python upt.py --help
+    python wac.py --help
     ```
 
 ## How It Works
