@@ -8,6 +8,7 @@ def main():
     parser.add_argument("urls", nargs="*", type=str, help="URLs to check")
     parser.add_argument("-f", "--file", type=str, help="File to read the URLs from")
     parser.add_argument("-w", "--write", type=str, help="File to write the output to")
+    parser.add_argument("-t", "--timeout", type=float, help="Set the timeout of the requests")
 
     # Parse arguments
     args = parser.parse_args()
@@ -22,7 +23,7 @@ def main():
             urls = load_urls_from_file(args.file)
 
         if urls:
-            get_sites(urls, args.write)
+            get_sites(urls, args.write, args.timeout)
         else:
             print("No URLs provided.")
     except KeyboardInterrupt as e:

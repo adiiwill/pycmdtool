@@ -31,11 +31,11 @@ def get_status_color(status_code: int) -> str:
         print(f"Error determining status color for code {status_code}: {e}")
         return 'white'
 
-def check_site(url: str, index: int) -> dict:
+def check_site(url: str, index: int, timeout: int) -> dict:
     """Check a single URL and return a dictionary of results."""
     try:
         url = normalize_url(url)
-        req = requests.get(url, timeout=5)
+        req = requests.get(url, timeout=timeout)
         color = get_status_color(req.status_code)
 
         result = {
@@ -68,7 +68,7 @@ def check_site(url: str, index: int) -> dict:
         print(colored(f"{index:<4} {url:<50} {'Unknown Error':<15} {str(e):<25}", "red"))
         return error_msg
 
-def get_sites(urls: list[str], writefile: str = None):
+def get_sites(urls: list[str], writefile: str = None, timeout: int = 5):
     """Check a list of URLs and optionally write results to a CSV file."""
     header = f"{'No.':<4} {'URL':<50} {'Status':<15} {'Reason':<25} {'Time Elapsed':<15}"
     separator = "=" * 110
@@ -77,7 +77,7 @@ def get_sites(urls: list[str], writefile: str = None):
 
     results = []
     for it, url in enumerate(urls):
-        result = check_site(url, it + 1)
+        result = check_site(url, it + 1, timeout)
         results.append(result)
 
     if writefile:

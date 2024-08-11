@@ -27,6 +27,7 @@ Ever wondered if your favorite websites are up and running? This tool helps you 
 - **Direct URLs**: Provide URLs directly in the command line.
 - **From a File**: Use `-f` or `--file` to specify a file with URLs (one per line).
 - **Output to CSV**: Use `-w` or `--write` to specify a CSV file where results will be saved.
+- **Set timout**: Use `-t` or `--timeout` to set the timout of the requests.
 
 ### Examples
 
